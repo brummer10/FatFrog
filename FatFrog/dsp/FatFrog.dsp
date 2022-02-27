@@ -579,5 +579,5 @@ p6 = pre : fi.iir((b0/a0,b1/a0,b2/a0,b3/a0,b4/a0),(a1/a0,a2/a0,a3/a0,a4/a0)) wit
 b1 = checkbox("Bright[name:Bright");
 b2 = checkbox("NoiseFilter[name:NoiseFilter");
 
-process = ba.bypass_fade(ma.SR/10, 1-b2, p0a : p0aa) : *(1.5) : ba.bypass_fade(ma.SR/10, b1, p1 ) : ba.bypass_fade(ma.SR/10, 1 - b1,  *(4.0)) : p2 : p3 : p4 : *(0.666) : p5 : *(0.555) : p6 : *(0.555) ;
+process = ba.bypass_fade(ma.SR/10, 1-b2, p0a : p0aa : *(2.0)) : *(1.5) : ba.bypass_fade(ma.SR/10, b1, p1 ) : ba.bypass_fade(ma.SR/10, 1 - b1,  *(4.0)) : p2 : p3 : p4 : *(0.666) : p5 : *(0.555) : p6 : *(0.555) ;
 
